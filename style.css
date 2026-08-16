@@ -1,0 +1,796 @@
+/* =====================================================
+   BIRTHDAY FOR MADAM — PREMIUM ELEGANT CSS
+===================================================== */
+
+/* ---------- GOOGLE FONTS ---------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+
+/* ---------- RESET ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Poppins", sans-serif;
+    color: #ffffff;
+    background: #080611;
+    overflow-x: hidden;
+}
+
+
+/* =====================================================
+   ANIMATED BACKGROUND
+===================================================== */
+
+.background {
+    position: fixed;
+    inset: 0;
+    z-index: -10;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(255, 150, 210, 0.30),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(170, 145, 255, 0.28),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 50% 85%,
+            rgba(100, 180, 255, 0.20),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #05040c,
+            #111027,
+            #211635,
+            #090817
+        );
+
+    background-size: 180% 180%;
+    animation: backgroundMove 16s ease-in-out infinite;
+}
+
+@keyframes backgroundMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/* =====================================================
+   SOFT LIGHT
+===================================================== */
+
+body::before {
+    content: "";
+    position: fixed;
+
+    width: 450px;
+    height: 450px;
+
+    left: -180px;
+    top: -150px;
+
+    background: rgba(255, 150, 210, 0.16);
+    filter: blur(100px);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+    z-index: -5;
+}
+
+body::after {
+    content: "";
+
+    position: fixed;
+
+    width: 450px;
+    height: 450px;
+
+    right: -180px;
+    bottom: -150px;
+
+    background: rgba(150, 130, 255, 0.16);
+    filter: blur(110px);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+    z-index: -5;
+}
+
+
+/* =====================================================
+   LOADER
+===================================================== */
+
+#loader {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #070611;
+
+    z-index: 9999;
+
+    transition: opacity 1s ease;
+}
+
+.loader-content {
+    text-align: center;
+}
+
+.loader-heart {
+    font-size: 55px;
+    margin-bottom: 18px;
+
+    animation: heartbeat 1.2s infinite;
+}
+
+.loader-content h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 26px;
+}
+
+.loader-content p {
+    margin-top: 8px;
+    opacity: 0.55;
+    font-size: 13px;
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.18);
+    }
+}
+
+
+/* =====================================================
+   GLASSMORPHISM
+===================================================== */
+
+.glass {
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.35),
+        inset 0 1px 1px rgba(255, 255, 255, 0.10);
+
+    border-radius: 28px;
+}
+
+
+/* =====================================================
+   MUSIC BUTTON
+===================================================== */
+
+#musicBtn {
+    position: fixed;
+
+    right: 22px;
+    bottom: 22px;
+
+    width: 55px;
+    height: 55px;
+
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    color: white;
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    z-index: 1000;
+
+    transition: 0.35s ease;
+}
+
+#musicBtn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(255, 180, 220, 0.45);
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 20px;
+}
+
+.hero-card {
+    width: min(92%, 480px);
+
+    padding: 45px 32px;
+
+    text-align: center;
+
+    animation: heroAppear 1.3s ease;
+}
+
+@keyframes heroAppear {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =====================================================
+   PHOTO — CENTERED
+===================================================== */
+
+.photo-wrapper {
+    width: 190px;
+    height: 190px;
+
+    margin: 0 auto 28px;
+
+    padding: 5px;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #f3a8d2,
+            #bda7ff,
+            #ffffff
+        );
+
+    box-shadow:
+        0 0 30px rgba(255, 175, 220, 0.45),
+        0 0 70px rgba(180, 150, 255, 0.18);
+
+    animation: photoGlow 4s ease-in-out infinite;
+}
+
+.profile {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 4px solid #171326;
+}
+
+@keyframes photoGlow {
+    0%, 100% {
+        box-shadow:
+            0 0 25px rgba(255, 175, 220, 0.35);
+    }
+
+    50% {
+        box-shadow:
+            0 0 50px rgba(255, 175, 220, 0.70);
+    }
+}
+
+
+/* =====================================================
+   HERO TEXT
+===================================================== */
+
+.small-title {
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    opacity: 0.60;
+}
+
+.hero h1 {
+    margin-top: 12px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(45px, 10vw, 68px);
+
+    line-height: 1.05;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ffffff,
+            #ffd1e7,
+            #d7ceff,
+            #ffffff
+        );
+
+    background-size: 250%;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+
+    animation: textShine 5s linear infinite;
+}
+
+@keyframes textShine {
+    from {
+        background-position: 0%;
+    }
+
+    to {
+        background-position: 250%;
+    }
+}
+
+.hero h2 {
+    margin-top: 8px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 34px;
+
+    font-weight: 500;
+}
+
+.hero h2 span {
+    display: inline-block;
+    animation: heartbeat 1.5s infinite;
+}
+
+.hero-message {
+    max-width: 350px;
+
+    margin: 20px auto 28px;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+
+    opacity: 0.72;
+}
+
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+#surpriseBtn,
+#finalSurprise {
+    border: none;
+
+    padding: 14px 26px;
+
+    border-radius: 50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #ffe1ee
+        );
+
+    color: #a63c70;
+
+    font-family: "Poppins", sans-serif;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.35s ease;
+
+    box-shadow:
+        0 10px 30px rgba(255, 180, 220, 0.18);
+}
+
+#surpriseBtn:hover,
+#finalSurprise:hover {
+    transform: translateY(-4px) scale(1.03);
+
+    box-shadow:
+        0 15px 40px rgba(255, 180, 220, 0.35);
+}
+
+
+/* =====================================================
+   GENERAL SECTIONS
+===================================================== */
+
+section:not(.hero) {
+    padding: 100px 20px;
+}
+
+.section-heading {
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+.section-heading span {
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    opacity: 0.45;
+}
+
+.section-heading h2 {
+    margin-top: 8px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(32px, 7vw, 48px);
+}
+
+.section-heading p {
+    margin-top: 10px;
+
+    font-size: 14px;
+
+    opacity: 0.58;
+}
+
+
+/* =====================================================
+   LETTER
+===================================================== */
+
+.letter-card {
+    width: min(92%, 900px);
+
+    margin: auto;
+
+    padding: 45px;
+
+    line-height: 2;
+
+    font-size: 15px;
+
+    color: rgba(255, 255, 255, 0.86);
+}
+
+
+/* =====================================================
+   REASONS
+===================================================== */
+
+.reason-grid {
+    width: min(92%, 1100px);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.reason-card {
+    padding: 30px 22px;
+
+    text-align: center;
+
+    transition: 0.4s ease;
+}
+
+.reason-card:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 20px 50px rgba(255, 170, 220, 0.16);
+}
+
+.reason-icon {
+    font-size: 36px;
+
+    margin-bottom: 16px;
+}
+
+.reason-card h3 {
+    margin-bottom: 12px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 21px;
+}
+
+.reason-card p {
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    opacity: 0.65;
+}
+
+
+/* =====================================================
+   SURPRISE SECTION
+===================================================== */
+
+.surprise-section {
+    min-height: 70vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.surprise-card {
+    width: min(92%, 620px);
+
+    padding: 55px 30px;
+
+    text-align: center;
+}
+
+.gift-icon {
+    font-size: 70px;
+
+    margin-bottom: 20px;
+
+    animation: floatingGift 2.5s ease-in-out infinite;
+}
+
+@keyframes floatingGift {
+    0%, 100% {
+        transform: translateY(0) rotate(-3deg);
+    }
+
+    50% {
+        transform: translateY(-12px) rotate(3deg);
+    }
+}
+
+.surprise-card h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 38px;
+
+    margin-bottom: 12px;
+}
+
+.surprise-card p {
+    margin-bottom: 25px;
+
+    opacity: 0.62;
+}
+
+
+/* =====================================================
+   ENDING
+===================================================== */
+
+.ending-section {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ending-card {
+    width: min(92%, 760px);
+
+    padding: 60px 35px;
+
+    text-align: center;
+}
+
+.ending-small {
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    opacity: 0.45;
+}
+
+.ending-card h1 {
+    margin-top: 15px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(45px, 10vw, 72px);
+}
+
+.ending-card h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 35px;
+
+    color: #ffd6e9;
+}
+
+.divider {
+    width: 80px;
+    height: 1px;
+
+    margin: 30px auto;
+
+    background: rgba(255, 255, 255, 0.35);
+}
+
+.ending-card > p {
+    line-height: 1.9;
+
+    opacity: 0.72;
+
+    max-width: 580px;
+
+    margin: auto;
+}
+
+.final-message {
+    margin-top: 35px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 25px;
+
+    color: #ffe0ed;
+}
+
+.made-by {
+    margin-top: 35px;
+
+    font-size: 11px;
+
+    opacity: 0.35;
+}
+
+
+/* =====================================================
+   FIREWORK CANVAS
+===================================================== */
+
+#fireworks {
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+
+    z-index: 500;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 800px) {
+
+    .reason-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .hero {
+        padding: 25px 15px;
+    }
+
+    .hero-card {
+        width: 94%;
+        padding: 35px 20px;
+    }
+
+    .photo-wrapper {
+        width: 155px;
+        height: 155px;
+    }
+
+    .hero h1 {
+        font-size: 44px;
+    }
+
+    .hero h2 {
+        font-size: 29px;
+    }
+
+    section:not(.hero) {
+        padding: 75px 15px;
+    }
+
+    .letter-card {
+        padding: 28px 22px;
+
+        font-size: 14px;
+
+        line-height: 1.9;
+    }
+
+    .reason-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .reason-card {
+        padding: 28px 20px;
+    }
+
+    .surprise-card {
+        padding: 45px 22px;
+    }
+
+    .ending-card {
+        padding: 50px 22px;
+    }
+
+    #musicBtn {
+        width: 50px;
+        height: 50px;
+
+        right: 15px;
+        bottom: 15px;
+    }
+
+}

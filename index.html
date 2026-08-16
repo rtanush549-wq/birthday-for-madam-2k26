@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday Madam ❤️</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+</head>
+
+<body>
+
+    <!-- =========================
+         LOADING SCREEN
+    ========================== -->
+
+    <div id="loader">
+
+        <div class="loader-content">
+
+            <div class="loader-heart">❤️</div>
+
+            <h2>Preparing something special...</h2>
+
+            <p>Just for you, Madam ✨</p>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         BACKGROUND
+    ========================== -->
+
+    <div class="background"></div>
+
+    <div class="stars"></div>
+
+    <div class="particles"></div>
+
+
+    <!-- =========================
+         MUSIC BUTTON
+    ========================== -->
+
+    <button id="musicBtn" aria-label="Play music">
+
+        <i class="fa-solid fa-music"></i>
+<audio id="music" src="assets/music.mp3"></audio>s
+    </button>
+
+    <audio id="music" loop>
+
+        <source src="assets/music.mp3" type="audio/mpeg">
+
+    </audio>
+
+
+    <!-- =========================
+         HERO SECTION
+    ========================== -->
+
+    <section class="hero">
+
+        <div class="glass hero-card">
+
+            <div class="photo-wrapper">
+
+                <img
+                    src="assets/madam.jpg"
+                    alt="Madam"
+                    class="profile"
+                >
+
+            </div>
+
+
+            <p class="small-title">
+                A little celebration for
+            </p>
+
+
+            <h1>
+                Happy Birthday
+            </h1>
+
+
+            <h2>
+                Madam <span>❤️</span>
+            </h2>
+
+
+            <p class="hero-message">
+
+                Some people make life brighter
+                simply by being a part of it.
+
+            </p>
+
+
+            <button id="surpriseBtn">
+
+                <span>Open Your Surprise</span>
+
+                <i class="fa-solid fa-gift"></i>
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         BIRTHDAY LETTER
+    ========================== -->
+
+    <section class="letter-section">
+
+        <div class="section-heading">
+
+            <span>01</span>
+
+            <h2>
+                A Letter For You
+            </h2>
+
+        </div>
+
+
+        <div class="glass letter-card">
+
+            <p>
+
+                Birthdays are not just about celebrating another year of life;
+                they are a reminder that every passing year adds a new chapter
+                to the beautiful story called life.
+
+                <br><br>
+
+                Some people make this journey brighter simply by being a part
+                of it. Your presence is a small reminder that even in a world
+                full of changes, kindness, laughter, and genuine connections
+                still exist.
+
+                <br><br>
+
+                On your special day, I wish you not only happiness and success,
+                but also the courage to chase your dreams, the strength to
+                overcome every challenge, and the peace to enjoy every little
+                moment life offers.
+
+                <br><br>
+
+                May the coming year bring you countless memories, meaningful
+                experiences, and reasons to smile. Keep shining with the same
+                beautiful soul, because the world needs more hearts like yours.
+
+                <br><br>
+
+                Happy Birthday! May your journey ahead be filled with light,
+                love, and endless possibilities. ✨
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         REASONS SECTION
+    ========================== -->
+
+    <section class="reasons-section">
+
+        <div class="section-heading">
+
+            <span>02</span>
+
+            <h2>
+                Reasons Why You're Special
+            </h2>
+
+            <p>
+                Some things are difficult to explain,
+                but easy to feel.
+            </p>
+
+        </div>
+
+
+        <div class="reason-grid">
+
+
+            <div class="glass reason-card">
+
+                <div class="reason-icon">
+                    🌸
+                </div>
+
+                <h3>
+                    Kind Heart
+                </h3>
+
+                <p>
+                    Your kindness makes people feel
+                    comfortable, valued and cared for.
+                </p>
+
+            </div>
+
+
+            <div class="glass reason-card">
+
+                <div class="reason-icon">
+                    ✨
+                </div>
+
+                <h3>
+                    Beautiful Smile
+                </h3>
+
+                <p>
+                    Your smile has a way of making
+                    ordinary moments feel special.
+                </p>
+
+            </div>
+
+
+            <div class="glass reason-card">
+
+                <div class="reason-icon">
+                    🌙
+                </div>
+
+                <h3>
+                    Strong Soul
+                </h3>
+
+                <p>
+                    You carry yourself with a quiet
+                    strength and beautiful grace.
+                </p>
+
+            </div>
+
+
+            <div class="glass reason-card">
+
+                <div class="reason-icon">
+                    💫
+                </div>
+
+                <h3>
+                    One Of A Kind
+                </h3>
+
+                <p>
+                    There is only one you, and that's
+                    what makes you truly unforgettable.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SURPRISE SECTION
+    ========================== -->
+
+    <section class="surprise-section">
+
+        <div class="glass surprise-card">
+
+            <div class="gift-icon">
+                🎁
+            </div>
+
+            <h2>
+                There's More...
+            </h2>
+
+            <p>
+                Because one birthday wish could never
+                be enough.
+            </p>
+
+            <button id="finalSurprise">
+
+                One Last Surprise ✨
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FINAL SECTION
+    ========================== -->
+
+    <section class="ending-section">
+
+        <div class="glass ending-card">
+
+            <p class="ending-small">
+                And finally...
+            </p>
+
+
+            <h1>
+                Happy Birthday
+            </h1>
+
+
+            <h2>
+                Madam ❤️
+            </h2>
+
+
+            <div class="divider"></div>
+
+
+            <p>
+
+                May every dream you chase find its way to you.
+
+                <br><br>
+
+                May every day remind you how valuable
+                you truly are.
+
+                <br><br>
+
+                And may the journey ahead be filled with
+                light, love, happiness and endless possibilities.
+
+            </p>
+
+
+            <div class="final-message">
+
+                Thank you for existing. ✨
+
+            </div>
+
+
+            <p class="made-by">
+
+                Made with ❤️ by Tanush
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FIREWORK CANVAS
+    ========================== -->
+
+    <canvas id="fireworks"></canvas>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
